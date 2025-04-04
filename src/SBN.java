@@ -1,3 +1,5 @@
+package src;
+
 public class SBN {
     private String name; // Nama
     private double interestRate; // Bunga
