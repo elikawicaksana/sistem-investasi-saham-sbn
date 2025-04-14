@@ -6,8 +6,16 @@ public class Admin {
     private List<SBN> sbnList;
     private List<Saham> sahamList;
 
-    public Admin() {
-        this.sbnList = new ArrayList<>();
+    public Admin(String username, String password) {
+        super(username, password);
+        this.daftarSaham = new ArrayList<>();
+        this.daftarSBN = new ArrayList<>();
+    }
+
+    @Override
+    public void showMenu() {
+        AdminMenu adminMenu = new AdminMenu(daftarSaham, daftarSBN);
+        adminMenu.viewMenu();
     }
 
     // SBN
