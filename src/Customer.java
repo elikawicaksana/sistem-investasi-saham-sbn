@@ -4,8 +4,15 @@ public class Customer {
     // melakukan investasi dan melihat porto
     private Portofolio portofolio;
 
-    public Customer() {
+    public Customer(String username, String password) {
+        super(username, password);
         this.portofolio = new Portofolio();
+    }
+
+    @Override
+    public void showMenu() {
+        CustMenu custMenu = new CustMenu(this);
+        custMenu.viewMenu();
     }
 
     public void investSaham(Saham saham, int quantity) {
