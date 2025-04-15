@@ -17,7 +17,7 @@ public class Customer {
         portofolio.addSBN(sbn, amount);
         System.out.println("Invested in SBN: " + sbn.getName());
     }
-    public void viewPortfolio() {
+    public void viewPortofolio() {
         portofolio.viewPortofolio();
     }
 
