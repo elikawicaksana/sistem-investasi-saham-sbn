@@ -1,6 +1,6 @@
 package src;
 
-public class Customer {
+public class Customer extends User {
     // melakukan investasi dan melihat porto
     private Portofolio portofolio;
 
