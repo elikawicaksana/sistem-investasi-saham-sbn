@@ -7,9 +7,10 @@ public class LoginSystem {
 
     public LoginSystem() {
         users = new ArrayList<>();
+
         // Menambahkan beberapa pengguna untuk demonstrasi
         users.add(new Admin("admin", "admin123"));
-        users.add(new Customer("customer1", "pass123"));
+        users.add(new Customer("customer", "customer123"));
     }
 
     public User login(String username, String password) {
@@ -25,19 +26,21 @@ public class LoginSystem {
         LoginSystem loginSystem = new LoginSystem();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Username: ");
-        String username = scanner.nextLine();
-        System.out.print("Password: ");
-        String password = scanner.nextLine();
+        while(true) {
+            System.out.print("\n===== Login =====\n");
+            System.out.print("Username: ");
+            String username = scanner.nextLine();
+            System.out.print("Password: ");
+            String password = scanner.nextLine();
+            System.out.print("=================");
 
-        User user = loginSystem.login(username, password);
-        if (user != null) {
-            System.out.println("Login berhasil!");
-            user.showMenu(); // Menampilkan menu sesuai tipe pengguna
-        } else {
-            System.out.println("Login gagal. Username atau password salah.");
+            User user = loginSystem.login(username, password);
+            if (user != null) {
+                System.out.println("\nLogin berhasil!\n");
+                user.showMenu(); // Menampilkan menu sesuai tipe pengguna
+            } else {
+                System.out.println("\nLogin gagal. Username atau password salah.\n");
+            }
         }
-
-        scanner.close();
     }
 }
