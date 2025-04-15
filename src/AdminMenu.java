@@ -2,28 +2,29 @@ package src;
 import java.util.*;
 
 public class AdminMenu {
-    private List<Saham> daftarSaham;
-    private List<SBN> daftarSBN;
+    private List<Saham> listSaham;
+    private List<SBN> listSBN;
     private Scanner scanner;
 
     public AdminMenu() {
-        daftarSaham = new ArrayList<>();
-        daftarSBN = new ArrayList<>();
-        scanner = new Scanner(System.in);
+        this.listSaham = new ArrayList<>();
+        this.listSBN = new ArrayList<>();
+        this.scanner = new Scanner(System.in);
     }
 
     public void viewMenu() {
         while (true) {
-            System.out.println("\n--- Menu Admin ---");
-            System.out.println("1. Tambah Saham");
-            System.out.println("2. Ubah Harga Saham");
-            System.out.println("3. Tambah Produk SBN");
-            System.out.println("0. Keluar");
-            System.out.print("Pilih menu: ");
-            int pilihan = scanner.nextInt();
-            scanner.nextLine(); // Buang enter
+            System.out.println("===== Admin Menu ======");
+            System.out.println("  1. Tambah Saham      ");
+            System.out.println("  2. Ubah Harga Saham  ");
+            System.out.println("  3. Tambah Produk SBN ");
+            System.out.println("  4. Keluar            ");
+            System.out.println("=======================");
+            System.out.print("Pilih menu (1-4): ");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
 
-            switch (pilihan) {
+            switch (choice) {
                 case 1:
                     addSaham();
                     break;
@@ -33,62 +34,62 @@ public class AdminMenu {
                 case 3:
                     addSBN();
                     break;
-                case 0:
+                case 4:
                     System.out.println("Keluar dari sistem admin.");
                     return;
                 default:
-                    System.out.println("Pilihan tidak valid.");
+                    System.out.println("Pilihan tidak valid..");
             }
         }
     }
 
     private void addSaham() {
         System.out.print("Kode Saham: ");
-        String kode = scanner.nextLine();
+        String code = scanner.nextLine();
         System.out.print("Nama Perusahaan: ");
-        String nama = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.print("Harga Saham: ");
-        double harga = scanner.nextDouble();
+        double price = scanner.nextDouble();
         scanner.nextLine();
 
-        daftarSaham.add(new Saham(kode, nama, harga));
+        listSaham.add(new Saham(code, name, price));
         System.out.println("Saham berhasil ditambahkan.");
     }
 
     private void addSBN() {
         System.out.print("Nama SBN: ");
-        String nama = scanner.nextLine();
-        System.out.print("Bunga (%): ");
-        double bunga = scanner.nextDouble();
+        String name = scanner.nextLine();
+        System.out.print("Suku Bunga (%): ");
+        double interest = scanner.nextDouble();
         System.out.print("Durasi (tahun): ");
-        int durasi = scanner.nextInt();
+        int duration = scanner.nextInt();
         scanner.nextLine();
         System.out.print("Tanggal Jatuh Tempo: ");
-        String tanggal = scanner.nextLine();
+        String maturityDate = scanner.nextLine();
         System.out.print("Kuota Nasional: ");
-        int kuota = scanner.nextInt();
+        int quota = scanner.nextInt();
         scanner.nextLine();
 
-        daftarSBN.add(new SBN(nama, bunga, durasi, tanggal, kuota));
+        listSBN.add(new SBN(name, interest, duration, maturityDate, quota));
         System.out.println("SBN berhasil ditambahkan.");
     }
 
     private void changeSahamPrice() {
-        if (daftarSaham.isEmpty()) {
-            System.out.println("Belum ada data saham.");
+        if (listSaham.isEmpty()) {
+            System.out.println("Data saham tidak tersedia.");
             return;
         }
 
         System.out.print("Masukkan kode saham: ");
-        String kode = scanner.nextLine();
-        for (Saham saham : daftarSaham) {
-            if (saham.getCode().equalsIgnoreCase(kode)) {
+        String code = scanner.nextLine();
+        for (Saham saham : listSaham) {
+            if (saham.getCode().equalsIgnoreCase(code)) {
                 System.out.print("Harga baru: ");
-                double hargaBaru = scanner.nextDouble();
+                double newPrice = scanner.nextDouble();
                 scanner.nextLine();
 
-                saham.setPrice(hargaBaru);
-                System.out.println("Harga saham berhasil diubah.");
+                saham.setPrice(newPrice);
+                System.out.println("Harga saham berhasil diperbarui.");
                 return;
             }
         }
