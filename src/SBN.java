@@ -35,4 +35,10 @@ public class SBN {
         return nationalQuota;
     }
 
+    // Override toString() biar tampilannya informatif
+    @Override
+    public String toString() {
+        return String.format("Nama: %s | Bunga: %.2f%% | Durasi: %d tahun | Jatuh Tempo: %s | Kuota: %d",
+                name, interestRate, duration, maturityDate, nationalQuota);
+    }
 }
