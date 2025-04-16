@@ -3,16 +3,12 @@ package src;
 import java.util.*;
 
 public class CustMenu {
-    private List<Saham> listSaham;
-    private List<SBN> listSBN;
     private Customer customer;
     private Scanner scanner;
 
     public CustMenu(Customer customer) {
         this.customer = customer;
-        listSaham = new ArrayList<>();
-        listSBN = new ArrayList<>();
-        scanner = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
     }
 
     public void viewMenu() {
@@ -31,7 +27,7 @@ public class CustMenu {
 
             switch (choice) {
                 case 1:
-                    // buySaham();
+                     buySaham();
                     break;
                 case 2:
                     // sellSaham();
@@ -43,7 +39,7 @@ public class CustMenu {
                     // simulationSBN();
                     break;
                 case 5:
-                    // viewPortfolio();
+//                    customer.viewPortofolio();
                     break;
                 case 6:
                     System.out.println("Keluar dari sistem customer.");
@@ -52,6 +48,35 @@ public class CustMenu {
                     System.out.println("Pilihan tidak valid.");
             }
         }
+    }
+
+    private void buySaham() {
+        List<Saham> daftarSaham = InvestmentData.getSahamList();
+        if (daftarSaham.isEmpty()) {
+            System.out.println("Tidak ada saham yang tersedia.");
+            return;
+        }
+
+        System.out.println("=== Daftar Saham Tersedia ===");
+        for (Saham saham : daftarSaham) {
+            System.out.printf("%s - %s - Harga: %.2f%n", saham.getCode(), saham.getCompanyName(), saham.getPrice());
+        }
+
+        System.out.print("Masukkan kode saham yang ingin dibeli: ");
+        String kode = scanner.nextLine();
+        System.out.print("Masukkan jumlah lembar saham: ");
+        int jumlah = scanner.nextInt();
+        scanner.nextLine();
+
+        for (Saham saham : daftarSaham) {
+            if (saham.getCode().equalsIgnoreCase(kode)) {
+                customer.investSaham(saham, jumlah);
+                System.out.println("Pembelian saham berhasil.");
+                return;
+            }
+        }
+
+        System.out.println("Saham tidak ditemukan.");
     }
 
     public static void main(String[] args) {
