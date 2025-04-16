@@ -2,13 +2,9 @@ package src;
 import java.util.*;
 
 public class AdminMenu {
-    private List<Saham> listSaham;
-    private List<SBN> listSBN;
     private Scanner scanner;
 
     public AdminMenu() {
-        this.listSaham = new ArrayList<>();
-        this.listSBN = new ArrayList<>();
         this.scanner = new Scanner(System.in);
     }
 
@@ -52,8 +48,34 @@ public class AdminMenu {
         double price = scanner.nextDouble();
         scanner.nextLine();
 
-        listSaham.add(new Saham(code, name, price));
+        Saham saham = new Saham(code, name, price);
+        InvestmentData.addSaham(saham);
         System.out.println("Saham berhasil ditambahkan.");
+    }
+
+    private void changeSahamPrice() {
+        List<Saham> sahamList = InvestmentData.getSahamList();
+        if (sahamList.isEmpty()) {
+            System.out.println("Data saham tidak tersedia.");
+            return;
+        }
+
+        System.out.print("Masukkan kode saham: ");
+        String code = scanner.nextLine();
+
+        for (Saham saham : sahamList) {
+            if (saham.getCode().equalsIgnoreCase(code)) {
+                System.out.print("Harga baru: ");
+                double newPrice = scanner.nextDouble();
+                scanner.nextLine();
+
+                saham.setPrice(newPrice);
+                System.out.println("Harga saham berhasil diperbarui.");
+                return;
+            }
+        }
+
+        System.out.println("Saham tidak ditemukan.");
     }
 
     private void addSBN() {
@@ -70,31 +92,21 @@ public class AdminMenu {
         int quota = scanner.nextInt();
         scanner.nextLine();
 
-        listSBN.add(new SBN(name, interest, duration, maturityDate, quota));
+        SBN sbn = new SBN(name, interest, duration, maturityDate, quota);
+        InvestmentData.addSBN(sbn);
         System.out.println("SBN berhasil ditambahkan.");
     }
 
-    private void changeSahamPrice() {
-        if (listSaham.isEmpty()) {
-            System.out.println("Data saham tidak tersedia.");
-            return;
+    private void viewInvestmentProducts() {
+        System.out.println("=== Daftar Saham ===");
+        for (Saham saham : InvestmentData.getSahamList()) {
+            System.out.println(saham);
         }
 
-        System.out.print("Masukkan kode saham: ");
-        String code = scanner.nextLine();
-        for (Saham saham : listSaham) {
-            if (saham.getCode().equalsIgnoreCase(code)) {
-                System.out.print("Harga baru: ");
-                double newPrice = scanner.nextDouble();
-                scanner.nextLine();
-
-                saham.setPrice(newPrice);
-                System.out.println("Harga saham berhasil diperbarui.");
-                return;
-            }
+        System.out.println("\n=== Daftar SBN ===");
+        for (SBN sbn : InvestmentData.getSBNList()) {
+            System.out.println(sbn);
         }
-
-        System.out.println("Saham tidak ditemukan.");
     }
 
     public static void main(String[] args) {
@@ -102,4 +114,3 @@ public class AdminMenu {
         adminMenu.viewMenu();
     }
 }
-
