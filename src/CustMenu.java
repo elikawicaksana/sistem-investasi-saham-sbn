@@ -33,7 +33,7 @@ public class CustMenu {
                     // sellSaham();
                     break;
                 case 3:
-                    // buySBN();
+                     buySBN();
                     break;
                 case 4:
                     // simulationSBN();
@@ -77,6 +77,35 @@ public class CustMenu {
         }
 
         System.out.println("Saham tidak ditemukan.");
+    }
+
+    private void buySBN() {
+        List<SBN> daftarSBN = InvestmentData.getSBNList();
+        if (daftarSBN.isEmpty()) {
+            System.out.println("Tidak ada produk SBN yang tersedia.");
+            return;
+        }
+
+        System.out.println("=== Daftar SBN Tersedia ===");
+        for (SBN sbn : daftarSBN) {
+            System.out.println(sbn);
+        }
+
+        System.out.print("Masukkan nama SBN yang ingin dibeli: ");
+        String nama = scanner.nextLine();
+        System.out.print("Masukkan jumlah investasi (Rp): ");
+        double jumlah = scanner.nextDouble();
+        scanner.nextLine();
+
+        for (SBN sbn : daftarSBN) {
+            if (sbn.getName().equalsIgnoreCase(nama)) {
+                customer.investSBN(sbn, jumlah);
+                System.out.println("Investasi SBN berhasil.");
+                return;
+            }
+        }
+
+        System.out.println("SBN tidak ditemukan.");
     }
 
     public static void main(String[] args) {
