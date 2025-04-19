@@ -9,6 +9,10 @@ public class Customer extends User {
         this.portofolio = new Portofolio();
     }
 
+    public Portofolio getPortofolio() {
+        return portofolio;
+    }
+
     @Override
     public void showMenu() {
         CustMenu custMenu = new CustMenu(this);
