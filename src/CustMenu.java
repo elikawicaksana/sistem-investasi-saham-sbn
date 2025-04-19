@@ -30,7 +30,7 @@ public class CustMenu {
                      buySaham();
                     break;
                 case 2:
-                    // sellSaham();
+                     sellSaham();
                     break;
                 case 3:
                      buySBN();
@@ -77,6 +77,48 @@ public class CustMenu {
         }
 
         System.out.println("Saham tidak ditemukan.");
+    }
+
+    private void sellSaham() {
+        Map<Saham, Integer> daftarSaham = customer.getPortofolio().getDaftarSaham();
+
+        if (daftarSaham.isEmpty()) {
+            System.out.println("Kamu belum memiliki saham.");
+            return;
+        }
+
+        System.out.println("=== Saham yang Dimiliki ===");
+        for (Map.Entry<Saham, Integer> entry : daftarSaham.entrySet()) {
+            Saham saham = entry.getKey();
+            int jumlah = entry.getValue();
+            System.out.printf("%s - %s - Harga: %.2f - Jumlah: %d\n",
+                    saham.getCode(), saham.getCompanyName(), saham.getPrice(), jumlah);
+        }
+
+        System.out.print("Masukkan kode saham yang ingin dijual: ");
+        String kode = scanner.nextLine();
+        System.out.print("Masukkan jumlah lembar saham yang ingin dijual: ");
+        int jumlahJual = scanner.nextInt();
+        scanner.nextLine();
+
+        for (Saham saham : daftarSaham.keySet()) {
+            if (saham.getCode().equalsIgnoreCase(kode)) {
+                int jumlahDimiliki = daftarSaham.get(saham);
+                if (jumlahJual > jumlahDimiliki) {
+                    System.out.println("Jumlah saham yang dimiliki tidak mencukupi.");
+                    return;
+                } else {
+                    daftarSaham.put(saham, jumlahDimiliki - jumlahJual);
+                    if (daftarSaham.get(saham) == 0) {
+                        daftarSaham.remove(saham); // hapus jika 0
+                    }
+                    System.out.println("Saham berhasil dijual.");
+                    return;
+                }
+            }
+        }
+
+        System.out.println("Kode saham tidak ditemukan di portofolio.");
     }
 
     private void buySBN() {
