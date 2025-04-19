@@ -5,8 +5,11 @@ import java.util.Map;
 
 // Kelas portofolio menyimpan informasi saham dan SBN yang dimiliki customer
 public class Portofolio {
-    private Map<Saham, Integer> sahamOwned; // Peta yang menyimpan saham yang dimiliki dan jumlahnya
+    private Map<Saham, Integer> sahamOwned = new HashMap<>(); // Peta yang menyimpan saham yang dimiliki dan jumlahnya
     private Map<SBN, Double> sbnOwned; // Peta yang menyimpan SBN yang dimiliki dan nominalnya
+    public Map<Saham, Integer> getDaftarSaham() {
+        return sahamOwned;
+    }
 
     // Konstruktor untuk membuat portofolio baru
     public Portofolio() {
