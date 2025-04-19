@@ -39,7 +39,7 @@ public class CustMenu {
                     // simulationSBN();
                     break;
                 case 5:
-//                    customer.viewPortofolio();
+                    customer.viewPortofolio();
                     break;
                 case 6:
                     System.out.println("Keluar dari sistem customer.");
