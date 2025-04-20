@@ -36,7 +36,7 @@ public class CustMenu {
                      buySBN();
                     break;
                 case 4:
-                    // simulationSBN();
+                     simulationSBN();
                     break;
                 case 5:
                     customer.viewPortofolio();
@@ -143,6 +143,36 @@ public class CustMenu {
             if (sbn.getName().equalsIgnoreCase(nama)) {
                 customer.investSBN(sbn, jumlah);
                 System.out.println("Investasi SBN berhasil.");
+                return;
+            }
+        }
+
+        System.out.println("SBN tidak ditemukan.");
+    }
+
+    private void simulationSBN() {
+        List<SBN> daftarSBN = InvestmentData.getSBNList();
+        if (daftarSBN.isEmpty()) {
+            System.out.println("Tidak ada produk SBN yang tersedia untuk simulasi.");
+            return;
+        }
+
+        System.out.println("=== Daftar SBN Tersedia ===");
+        for (SBN sbn : daftarSBN) {
+            System.out.printf("%s - Bunga Tahunan: %.2f%%%n", sbn.getName(), sbn.getInterestRate() * 100);
+        }
+
+        System.out.print("Masukkan nama SBN untuk disimulasikan: ");
+        String nama = scanner.nextLine();
+        System.out.print("Masukkan nominal investasi (Rp): ");
+        double nominal = scanner.nextDouble();
+        scanner.nextLine();
+
+        for (SBN sbn : daftarSBN) {
+            if (sbn.getName().equalsIgnoreCase(nama)) {
+                double bungaBulanan = (sbn.getInterestRate() / 12) * 0.9 * nominal;
+                System.out.printf("Simulasi bunga bulanan dari investasi %.2f pada %s adalah: Rp %.2f%n",
+                        nominal, sbn.getName(), bungaBulanan);
                 return;
             }
         }
