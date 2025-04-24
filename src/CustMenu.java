@@ -13,14 +13,16 @@ public class CustMenu {
 
     public void viewMenu() {
         while (true) {
-            System.out.println("===== Menu Customer =====");
-            System.out.println("  1. Beli Saham");
-            System.out.println("  2. Jual Saham");
-            System.out.println("  3. Beli SBN");
-            System.out.println("  4. Simulasi SBN");
-            System.out.println("  5. Lihat Portofolio");
-            System.out.println("  6. Keluar");
-            System.out.println("=========================");
+            System.out.println("+---------------------------+");
+            System.out.println("|       Customer Menu       |");
+            System.out.println("+---------------------------+");
+            System.out.println("|  1. Beli Saham            |");
+            System.out.println("|  2. Jual Saham            |");
+            System.out.println("|  3. Beli SBN              |");
+            System.out.println("|  4. Simulasi SBN          |");
+            System.out.println("|  5. Lihat Portofolio      |");
+            System.out.println("|  6. Keluar                |");
+            System.out.println("+---------------------------+");
             System.out.print("Pilih Menu (1-6): ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Buang enter
