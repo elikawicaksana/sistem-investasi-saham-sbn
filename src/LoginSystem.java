@@ -27,12 +27,15 @@ public class LoginSystem {
         Scanner scanner = new Scanner(System.in);
 
         while(true) {
-            System.out.print("\n===== Login =====\n");
-            System.out.print("Username: ");
+            System.out.println("+----------------+");
+            System.out.println("|     Login      |");
+            System.out.println("+----------------+");
+            System.out.print("| Username: ");
             String username = scanner.nextLine();
-            System.out.print("Password: ");
+            System.out.print("| Password: ");
             String password = scanner.nextLine();
-            System.out.print("=================");
+            System.out.println("+----------------+");
+
 
             User user = loginSystem.login(username, password);
             if (user != null) {
