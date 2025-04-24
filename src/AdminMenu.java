@@ -10,13 +10,16 @@ public class AdminMenu {
 
     public void viewMenu() {
         while (true) {
-            System.out.println("===== Admin Menu ======");
-            System.out.println("  1. Tambah Saham      ");
-            System.out.println("  2. Ubah Harga Saham  ");
-            System.out.println("  3. Tambah Produk SBN ");
-            System.out.println("  4. Keluar            ");
-            System.out.println("=======================");
+            System.out.println("+---------------------------+");
+            System.out.println("|        Admin Menu         |");
+            System.out.println("+---------------------------+");
+            System.out.println("|  1. Tambah Saham          |");
+            System.out.println("|  2. Ubah Harga Saham      |");
+            System.out.println("|  3. Tambah Produk SBN     |");
+            System.out.println("|  4. Keluar                |");
+            System.out.println("+---------------------------+");
             System.out.print("Pilih menu (1-4): ");
+
             int choice = scanner.nextInt();
             scanner.nextLine();
 
