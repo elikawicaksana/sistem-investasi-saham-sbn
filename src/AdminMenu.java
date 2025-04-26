@@ -89,7 +89,7 @@ public class AdminMenu {
         System.out.print("Durasi (tahun): ");
         int duration = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Tanggal Jatuh Tempo: ");
+        System.out.print("Tanggal Jatuh Tempo (yyyy-mm-dd): ");
         String maturityDate = scanner.nextLine();
         System.out.print("Kuota Nasional: ");
         int quota = scanner.nextInt();
