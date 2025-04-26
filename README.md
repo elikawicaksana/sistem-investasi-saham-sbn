@@ -22,6 +22,14 @@ Dengan menggabungkan dua jenis instrumen ini, program memberikan gambaran menyel
 Program Investasi dapat dijalankan dengan dua jenis user, yaitu Admin dan Customer.
 
 # Admin
+![image](https://github.com/user-attachments/assets/a1ed41a4-dc1c-4a53-a681-489d09c6f4f4)
+
+Jenis user ini memiliki akses ke fitur-fitur berikut:
+1. Tambah Saham
+2. Ubah Harga Saham
+3. Tambah Produk SBN
+
+
 ## Login (Admin)
 ![image](https://github.com/user-attachments/assets/19c388bb-0c45-4ba8-a9fa-7228827a99d6)
 
@@ -33,14 +41,6 @@ Untuk menjalankan program sebagai admin, masukkan username dan password sebagai 
 Jika login berhasil, maka akan muncul pesan "Login Berhasil!".
 Namun jika tidak berhasil, kemungkinan ada kesalahan pada username atau password yang dimasukkan.
 
-<br>
-
-![image](https://github.com/user-attachments/assets/a1ed41a4-dc1c-4a53-a681-489d09c6f4f4)
-
-Jenis user ini memiliki akses ke fitur-fitur berikut:
-1. Tambah Saham
-2. Ubah Harga Saham
-3. Tambah Produk SBN
 
 ## Tambah Saham
 ![image](https://github.com/user-attachments/assets/1c4877d7-8fe6-4bdd-b0d0-c64aa9e250df)
@@ -56,19 +56,19 @@ Untuk mengubah harga saham di dalam program, pilih menu nomor 2, lalu masukkan k
 
 Untuk menambahkan produk SBN ke dalam program, pilih menu nomor 3, lalu masukkan nama SBN, suku bunga, durasi (tahun), tanggal jatuh tempo, dan kuota nasional. Jika data berhasil ditambahkan, maka akan muncul pesan "SBN berhasil ditambahkan."
 # Customer
+Jenis user ini memiliki akses ke fitur-fitur berikut:
+1. Beli Saham
+2. Jual Saham
+3. Beli SBN
+4. Simulasi SBN
+5. Lihat Portofolio
+
 ## Login (Customer)
 (Screenshot Login Customer)
 
 Untuk menjalankan program sebagai customer, masukkan username dan password sebagai berikut:
 * Username: customer
 * Password: customer123
-
-Jenis user ini memiliki akses ke fitur-fitur berikut:
-1. Beli Saham 
-2. Jual Saham            
-3. Beli SBN              
-4. Simulasi SBN          
-5. Lihat Portofolio
 
 ## Beli Saham
 ## Jual Saham
