@@ -92,7 +92,7 @@ public class AdminMenu {
         System.out.print("Tanggal Jatuh Tempo (yyyy-mm-dd): ");
         String maturityDate = scanner.nextLine();
         System.out.print("Kuota Nasional: ");
-        int quota = scanner.nextInt();
+        long quota = scanner.nextLong();
         scanner.nextLine();
 
         SBN sbn = new SBN(name, interest, duration, maturityDate, quota);
