@@ -8,9 +8,9 @@ public class SBN {
     private double interestRate;
     private int duration;
     private LocalDate maturityDate;
-    private int nationalQuota;
+    private long nationalQuota;
 
-    public SBN(String name, double interestRate, int duration, String maturityDateStr, int nationalQuota) {
+    public SBN(String name, double interestRate, int duration, String maturityDateStr, long nationalQuota) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         this.name = name;
         this.interestRate = interestRate;
@@ -35,7 +35,7 @@ public class SBN {
         return maturityDate;
     }
 
-    public int getNationalQuota() {
+    public long getNationalQuota() {
         return nationalQuota;
     }
 
