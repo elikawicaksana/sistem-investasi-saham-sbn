@@ -33,6 +33,8 @@ Untuk menjalankan program sebagai admin, masukkan username dan password sebagai 
 Jika login berhasil, maka akan muncul pesan "Login Berhasil!".
 Namun jika tidak berhasil, kemungkinan ada kesalahan pada username atau password yang dimasukkan.
 
+<br>
+
 ![image](https://github.com/user-attachments/assets/a1ed41a4-dc1c-4a53-a681-489d09c6f4f4)
 
 Jenis user ini memiliki akses ke fitur-fitur berikut:
@@ -43,17 +45,16 @@ Jenis user ini memiliki akses ke fitur-fitur berikut:
 ## Tambah Saham
 ![image](https://github.com/user-attachments/assets/1c4877d7-8fe6-4bdd-b0d0-c64aa9e250df)
 
-Untuk menambahkan saham ke dalam program, masukkan kode saham, nama perusahaan, dan harga saham. Jika saham berhasil ditambahkan, maka akan muncul pesan "Saham berhasil ditambahkan."
+Untuk menambahkan saham ke dalam program, pilih menu nomor 1 terlebih dahulu, lalu masukkan kode saham, nama perusahaan, dan harga saham. Jika saham berhasil ditambahkan, maka akan muncul pesan "Saham berhasil ditambahkan."
+
 ## Ubah Harga Saham
 ![image](https://github.com/user-attachments/assets/c2ab360e-5793-4875-9a54-3a186118e78f)
 
-Untuk mengubah harga saham di dalam program, masukkan kode saham dan harga terbarunya. Jika saham berhasil ditambahkan, maka akan muncul pesan "Harga saham berhasil diperbarui."
-
+Untuk mengubah harga saham di dalam program, pilih menu nomor 2, lalu masukkan kode saham dan harga terbarunya. Jika harga berhasil diperbarui, maka akan muncul pesan "Harga saham berhasil diperbarui."
 ## Tambah Produk SBN
 ![image](https://github.com/user-attachments/assets/9a071454-df68-481d-ac19-1696ecd20cf9)
 
-Untuk menambahkan produk SBN ke dalam program, masukkan nama SBN, suku bunga, durasi (tahun), tanggal jatuh tempo, dan kuota nasional. Jika saham berhasil ditambahkan, maka akan muncul pesan "SBN berhasil ditambahkan."
-
+Untuk menambahkan produk SBN ke dalam program, pilih menu nomor 3, lalu masukkan nama SBN, suku bunga, durasi (tahun), tanggal jatuh tempo, dan kuota nasional. Jika data berhasil ditambahkan, maka akan muncul pesan "SBN berhasil ditambahkan."
 # Customer
 ## Login (Customer)
 (Screenshot Login Customer)
