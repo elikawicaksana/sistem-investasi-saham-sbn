@@ -16,9 +16,11 @@ public class AdminMenu {
             System.out.println("|  1. Tambah Saham          |");
             System.out.println("|  2. Ubah Harga Saham      |");
             System.out.println("|  3. Tambah Produk SBN     |");
-            System.out.println("|  4. Keluar                |");
+            System.out.println("|  4. Lihat Produk Investasi|");
+            System.out.println("|  5. Keluar                |");
+
             System.out.println("+---------------------------+");
-            System.out.print("Pilih menu (1-4): ");
+            System.out.print("Pilih menu (1-5): ");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -34,6 +36,9 @@ public class AdminMenu {
                     addSBN();
                     break;
                 case 4:
+                    viewInvestmentProducts();
+                    break;
+                case 5:
                     System.out.println("Keluar dari sistem admin.");
                     return;
                 default:
@@ -110,6 +115,8 @@ public class AdminMenu {
         for (SBN sbn : InvestmentData.getSBNList()) {
             System.out.println(sbn);
         }
+
+        System.out.println("\n");
     }
 
     public static void main(String[] args) {
