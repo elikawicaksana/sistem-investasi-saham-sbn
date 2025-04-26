@@ -1,17 +1,21 @@
 package src;
 
-public class SBN {
-    private String name; // Nama
-    private double interestRate; // Bunga
-    private int duration; // Jangka Waktu
-    private String maturityDate; // Tanggal Jatuh Tempo
-    private int nationalQuota; // Kuota Nasional
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
-    public SBN(String name, double interestRate, int duration, String maturityDate, int nationalQuota) {
+public class SBN {
+    private String name;
+    private double interestRate;
+    private int duration;
+    private LocalDate maturityDate;
+    private int nationalQuota;
+
+    public SBN(String name, double interestRate, int duration, String maturityDateStr, int nationalQuota) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         this.name = name;
         this.interestRate = interestRate;
         this.duration = duration;
-        this.maturityDate = maturityDate;
+        this.maturityDate = LocalDate.parse(maturityDateStr, formatter);
         this.nationalQuota = nationalQuota;
     }
 
@@ -27,7 +31,7 @@ public class SBN {
         return duration;
     }
 
-    public String getMaturityDate() {
+    public LocalDate getMaturityDate() {
         return maturityDate;
     }
 
@@ -35,10 +39,9 @@ public class SBN {
         return nationalQuota;
     }
 
-    // Override toString() biar tampilannya informatif
     @Override
     public String toString() {
         return String.format("Nama: %s | Bunga: %.2f%% | Durasi: %d tahun | Jatuh Tempo: %s | Kuota: %d",
-                name, interestRate, duration, maturityDate, nationalQuota);
+                name, interestRate, duration, maturityDate.toString(), nationalQuota);
     }
 }
