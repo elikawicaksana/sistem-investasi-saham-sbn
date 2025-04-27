@@ -30,6 +30,7 @@ Jenis user ini memiliki akses ke fitur-fitur berikut:
 2. Ubah Harga Saham
 3. Tambah Produk SBN
 4. Lihat Produk Investasi
+5. Keluar
 
 ## Login (Admin)
 ![image](https://github.com/user-attachments/assets/a3e9b090-82e4-4231-9233-999e370cdb9f)
@@ -62,27 +63,47 @@ Untuk mengubah harga saham di dalam program, pilih menu nomor 2, lalu masukkan k
 Untuk menambahkan produk SBN ke dalam program, pilih menu nomor 3, lalu masukkan nama SBN, suku bunga, durasi (tahun), tanggal jatuh tempo, dan kuota nasional. Jika data berhasil ditambahkan, maka akan muncul pesan "SBN berhasil ditambahkan."
 
 ## Lihat Produk Investasi
-![image](https://github.com/user-attachments/assets/721cfec8-18ce-4ca5-bd3d-7bd3e725d57f)
+![image](https://github.com/user-attachments/assets/d70ddf47-3802-4bb9-a7ca-ada49650a58d)
 
 Untuk melihat produk investasi (Saham & SBN) di dalam program, pilih menu nomor 4, lalu daftar produk investasi akan tampil.
 
+## Keluar
+
 # Customer
+![image](https://github.com/user-attachments/assets/5b743915-c53d-44d3-8ffc-05ddad7cce44)
+
+
 Jenis user ini memiliki akses ke fitur-fitur berikut:
 1. Beli Saham
 2. Jual Saham
 3. Beli SBN
 4. Simulasi SBN
 5. Lihat Portofolio
-
+6. Keluar
+   
 ## Login (Customer)
-(Screenshot Login Customer)
+![image](https://github.com/user-attachments/assets/91c8ea9b-fc85-4b03-8a3d-fe60bb90aba9)
+
 
 Untuk menjalankan program sebagai customer, masukkan username dan password sebagai berikut:
 * Username: customer
 * Password: customer123
 
 ## Beli Saham
+![image](https://github.com/user-attachments/assets/d8f577a9-76a0-4e47-9391-41b5e594fe16)
+
 ## Jual Saham
+![image](https://github.com/user-attachments/assets/a2323f69-de28-498a-951a-7f1480651fd3)
+
+
 ## Beli SBN
+![image](https://github.com/user-attachments/assets/f45c1370-e1a7-4a9b-a020-fe498cf4358d)
+
 ## Simulasi SBN
+![image](https://github.com/user-attachments/assets/4f44d55d-7295-488f-9eee-e73f9cf39570)
+
 ## Lihat Portofolio
+![image](https://github.com/user-attachments/assets/7f77704c-8afc-4274-8f93-e8bde99ad25b)
+
+## Keluar 
+
