@@ -17,6 +17,8 @@ Fitur utama dalam program ini mencakup:
 
 Dengan menggabungkan dua jenis instrumen ini, program memberikan gambaran menyeluruh tentang pilihan investasi jangka pendek maupun jangka panjang, serta mempromosikan literasi finansial di kalangan pengguna.
 
+## UML
+
 # Prosedur Penggunaan Program
 
 Program Investasi dapat dijalankan dengan dua jenis user, yaitu Admin dan Customer.
@@ -68,6 +70,7 @@ Untuk menambahkan produk SBN ke dalam program, pilih menu nomor 3, lalu masukkan
 Untuk melihat produk investasi (Saham & SBN) di dalam program, pilih menu nomor 4, lalu daftar produk investasi akan tampil.
 
 ## Keluar
+Fitur ini berfungsi untuk keluar dari sistem customer dan kembali ke menu login Utama.
 
 # Customer
 ![image](https://github.com/user-attachments/assets/5b743915-c53d-44d3-8ffc-05ddad7cce44)
@@ -122,4 +125,4 @@ Untuk melakukan simulasi SBN, pilih menu nomor 4 terlebih dahulu, lalu masukkan 
 Untuk melihat Portofolio, pilih menu nomor 5 terlebih dahulu, setelah itu akan tampil daftar saham dan sbn yang dimiliki, beserta total nilai pasar saham dan total bunga SBN bulanan.
 
 ## Keluar 
-Fitur ini berfungsi untuk keluar dari sistem customer dan Kembali ke menu login Utama.
+Fitur ini berfungsi untuk keluar dari sistem customer dan kembali ke menu login Utama.
