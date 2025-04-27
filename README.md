@@ -92,18 +92,34 @@ Untuk menjalankan program sebagai customer, masukkan username dan password sebag
 ## Beli Saham
 ![image](https://github.com/user-attachments/assets/d8f577a9-76a0-4e47-9391-41b5e594fe16)
 
+
+Untuk membeli saham dengan program, pilih menu nomor 1 terlebih dahulu, lalu masukkan kode saham dan jumlah lembar saham yang ingin dibeli. Jika saham berhasil dibeli, maka akan muncul pesan "Pembelian saham berhasil."
+
+
 ## Jual Saham
 ![image](https://github.com/user-attachments/assets/a2323f69-de28-498a-951a-7f1480651fd3)
+
+
+Untuk menjual saham dengan program, pilih menu nomor 2 terlebih dahulu, lalu masukkan kode saham dan jumlah lembar saham yang ingin dijual. Jika saham berhasil dijual, maka akan muncul pesan "Saham berhasil dijual."
 
 
 ## Beli SBN
 ![image](https://github.com/user-attachments/assets/f45c1370-e1a7-4a9b-a020-fe498cf4358d)
 
+
+Untuk membeli SBN dengan program, pilih menu nomor 3 terlebih dahulu, lalu masukkan nama SBN dan jumlah investasi (Rp) yang ingin dibeli. Jika SBN berhasil dibeli, maka akan muncul pesan "Investasi SBN berhasil."
+
 ## Simulasi SBN
 ![image](https://github.com/user-attachments/assets/4f44d55d-7295-488f-9eee-e73f9cf39570)
+
+
+Untuk melakukan simulasi SBN, pilih menu nomor 4 terlebih dahulu, lalu masukkan nama dan nominal investasi (Rp) dari SBN yang ingin disimulasikan. Setelah itu program akan memberikan informasi mengenai simulasi bunga bulanan dari investasi yang disimulasikan.
 
 ## Lihat Portofolio
 ![image](https://github.com/user-attachments/assets/7f77704c-8afc-4274-8f93-e8bde99ad25b)
 
-## Keluar 
 
+Untuk melihat Portofolio, pilih menu nomor 5 terlebih dahulu, setelah itu akan tampil daftar saham dan sbn yang dimiliki, beserta total nilai pasar saham dan total bunga SBN bulanan.
+
+## Keluar 
+Fitur ini berfungsi untuk keluar dari sistem customer dan Kembali ke menu login Utama.
