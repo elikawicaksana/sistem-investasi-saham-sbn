@@ -31,7 +31,7 @@ Jenis user ini memiliki akses ke fitur-fitur berikut:
 
 
 ## Login (Admin)
-![image](https://github.com/user-attachments/assets/19c388bb-0c45-4ba8-a9fa-7228827a99d6)
+![image](https://github.com/user-attachments/assets/a3e9b090-82e4-4231-9233-999e370cdb9f)
 
 Untuk menjalankan program sebagai admin, masukkan username dan password sebagai berikut:
 * Username: admin
@@ -51,10 +51,17 @@ Untuk menambahkan saham ke dalam program, pilih menu nomor 1 terlebih dahulu, la
 ![image](https://github.com/user-attachments/assets/c2ab360e-5793-4875-9a54-3a186118e78f)
 
 Untuk mengubah harga saham di dalam program, pilih menu nomor 2, lalu masukkan kode saham dan harga terbarunya. Jika harga berhasil diperbarui, maka akan muncul pesan "Harga saham berhasil diperbarui."
+
 ## Tambah Produk SBN
 ![image](https://github.com/user-attachments/assets/9a071454-df68-481d-ac19-1696ecd20cf9)
 
 Untuk menambahkan produk SBN ke dalam program, pilih menu nomor 3, lalu masukkan nama SBN, suku bunga, durasi (tahun), tanggal jatuh tempo, dan kuota nasional. Jika data berhasil ditambahkan, maka akan muncul pesan "SBN berhasil ditambahkan."
+
+## Lihat Produk Investasi
+![image](https://github.com/user-attachments/assets/721cfec8-18ce-4ca5-bd3d-7bd3e725d57f)
+
+Untuk melihat produk investasi (Saham & SBN) di dalam program, pilih menu nomor 4, lalu daftar produk investasi akan tampil.
+
 # Customer
 Jenis user ini memiliki akses ke fitur-fitur berikut:
 1. Beli Saham
