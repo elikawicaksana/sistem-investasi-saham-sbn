@@ -22,13 +22,14 @@ Dengan menggabungkan dua jenis instrumen ini, program memberikan gambaran menyel
 Program Investasi dapat dijalankan dengan dua jenis user, yaitu Admin dan Customer.
 
 # Admin
-![image](https://github.com/user-attachments/assets/a1ed41a4-dc1c-4a53-a681-489d09c6f4f4)
+![image](https://github.com/user-attachments/assets/b50e786f-2cb0-4d95-a4c1-682c0764e07b)
+
 
 Jenis user ini memiliki akses ke fitur-fitur berikut:
 1. Tambah Saham
 2. Ubah Harga Saham
 3. Tambah Produk SBN
-
+4. Lihat Produk Investasi
 
 ## Login (Admin)
 ![image](https://github.com/user-attachments/assets/a3e9b090-82e4-4231-9233-999e370cdb9f)
@@ -43,17 +44,20 @@ Namun jika tidak berhasil, kemungkinan ada kesalahan pada username atau password
 
 
 ## Tambah Saham
-![image](https://github.com/user-attachments/assets/1c4877d7-8fe6-4bdd-b0d0-c64aa9e250df)
+![image](https://github.com/user-attachments/assets/5db894c4-3c5d-47c3-80ae-c2860105ea1e)
+
 
 Untuk menambahkan saham ke dalam program, pilih menu nomor 1 terlebih dahulu, lalu masukkan kode saham, nama perusahaan, dan harga saham. Jika saham berhasil ditambahkan, maka akan muncul pesan "Saham berhasil ditambahkan."
 
 ## Ubah Harga Saham
-![image](https://github.com/user-attachments/assets/c2ab360e-5793-4875-9a54-3a186118e78f)
+![image](https://github.com/user-attachments/assets/0c0f0b4b-6d09-4d4e-bbef-783c30064344)
+
 
 Untuk mengubah harga saham di dalam program, pilih menu nomor 2, lalu masukkan kode saham dan harga terbarunya. Jika harga berhasil diperbarui, maka akan muncul pesan "Harga saham berhasil diperbarui."
 
 ## Tambah Produk SBN
-![image](https://github.com/user-attachments/assets/9a071454-df68-481d-ac19-1696ecd20cf9)
+![image](https://github.com/user-attachments/assets/57bc3987-54ae-4c0c-84e6-dad70c3fe4d7)
+
 
 Untuk menambahkan produk SBN ke dalam program, pilih menu nomor 3, lalu masukkan nama SBN, suku bunga, durasi (tahun), tanggal jatuh tempo, dan kuota nasional. Jika data berhasil ditambahkan, maka akan muncul pesan "SBN berhasil ditambahkan."
 
