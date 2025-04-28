@@ -18,6 +18,8 @@ Fitur utama dalam program ini mencakup:
 Dengan menggabungkan dua jenis instrumen ini, program memberikan gambaran menyeluruh tentang pilihan investasi jangka pendek maupun jangka panjang, serta mempromosikan literasi finansial di kalangan pengguna.
 
 ## UML
+![image](PBO_UMLInvestasiSaham.png)
+
 
 # Prosedur Penggunaan Program
 
